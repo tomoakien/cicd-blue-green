@@ -126,7 +126,10 @@
     },
     {
       "Effect": "Allow",
-      "Action": ["ecr:DescribeImages"],
+      "Action": [
+        "ecr:DescribeImages",
+        "codestar-connections:UseConnection"
+      ],
       "Resource": "*"
     }
   ]

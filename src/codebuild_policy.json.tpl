@@ -26,7 +26,10 @@
     },
     {
       "Effect": "Allow",
-      "Action": ["ecr:*"],
+      "Action": [
+        "ecr:*",
+        "codestar-connections:UseConnection"
+        ],
       "Resource": "*"
     }
   ]
