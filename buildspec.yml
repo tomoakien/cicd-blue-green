@@ -15,7 +15,7 @@ phases:
     commands:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - printf '{"ImageURI":"%s"}' $REPOSITORY_URI:$IMAGE_TAG > imagedeDetail.json
+      - printf '{"ImageURI":"%s"}' $REPOSITORY_URI:$IMAGE_TAG > imageDetail.json
       - sed -i -e "s#<CONTAINER_NAME>#$CONTAINER_NAME#" taskdef.json
       - sed -i -e "s#<TASK_FAMILY>#$TASK_FAMILY#" taskdef.json
       - sed -i -e "s#<ACCOUNT_ID>#$ACCOUNT_ID#" taskdef.json
